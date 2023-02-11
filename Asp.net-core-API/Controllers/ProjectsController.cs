@@ -1,5 +1,10 @@
 using Asp.net_core_API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Asp.net_core_API.Controllers
 {
@@ -7,6 +12,14 @@ namespace Asp.net_core_API.Controllers
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
     {
+        private readonly OpeningTimeOption _option;
+
+        public ProjectsController(IOptions<OpeningTimeOption> option, ExampleClass exampleClass)
+        {
+            exampleClass.Name = "Update at ProjectsController";
+
+            _option = option.Value;
+        }
         // api/projects?query=net core
         [HttpGet]
         public IActionResult Get(string query)
@@ -26,27 +39,27 @@ namespace Asp.net_core_API.Controllers
         }
 
         [HttpPost]
-        
+
         public IActionResult Post([FromBody] CreateProjectModel createProject)
         {
             //Cadastrar projeto
-           if (createProject.Title.Length > 50)
-           {
-            return BadRequest();
-           } 
+            if (createProject.Title.Length > 200)
+            {
+                return BadRequest();
+            }
 
-           return CreatedAtAction(nameof(GetById), new {id = createProject.Id}, createProject);
-            
+            return CreatedAtAction(nameof(GetById), new { id = createProject.Id }, createProject);
+
         }
 
-    [HttpPut("{id}")]
+        [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] UpdateProjectModel updateProject)
         {
             // Editar ou atualizar projeto
             if (updateProject.Description.Length > 50)
             {
                 return BadRequest();
-            }   
+            }
 
             return NoContent();
         }

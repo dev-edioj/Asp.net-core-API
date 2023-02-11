@@ -25,3 +25,8 @@ D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\refint\Asp.net-c
 D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\Asp.net-core-API.pdb
 D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\Asp.net-core-API.genruntimeconfig.cache
 D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\ref\Asp.net-core-API.dll
+D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\staticwebassets\msbuild.Asp.net-core-API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\staticwebassets\msbuild.build.Asp.net-core-API.props
+D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Asp.net-core-API.props
+D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Asp.net-core-API.props
+D:\Developer\Asp.net-core-API\Asp.net-core-API\obj\Debug\net6.0\staticwebassets.pack.json
