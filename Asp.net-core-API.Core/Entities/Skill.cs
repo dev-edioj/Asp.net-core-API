@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Asp.net_core_API.Core.Entities
 {
-    public class Skill
+    public class Skill : BaseEntity
     {
-        
+        public Skill(string description)
+        {
+            Description = description;
+            CreatedAt = DateTime.Now;
+        }
+        public string Description { get; private set; }
+        public DateTime CreatedAt { get; private set; }
     }
 }
