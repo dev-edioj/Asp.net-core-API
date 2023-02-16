@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZYlK3gthZmPL1wLk1gHUgBFl4H3iNKEQaCFUX68geg+sD3i5E0FlYu5U9JnVsNO7FVGzdJ1AGfPZ6rY8fLg6sA==",
+  "dgSpecHash": "BVgYnLcvWYBWHeo/7CZqoTFcmEqwTDVUjs05ODCd2uvDM+TTBqYJXWexYpQxYBuaSQnLjdMLq2po2AoXOSbumg==",
   "success": true,
-  "projectFilePath": "D:\\Developer\\Asp.net-core-API\\Asp.net-core-API.Core\\DevFreela.Core.csproj",
+  "projectFilePath": "D:\\Developer\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

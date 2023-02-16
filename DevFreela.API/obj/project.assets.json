@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Developer\\Asp.net-core-API\\Asp.net-core-API\\DevFreela.API.csproj",
+      "projectUniqueName": "D:\\Developer\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
       "projectName": "DevFreela.API",
-      "projectPath": "D:\\Developer\\Asp.net-core-API\\Asp.net-core-API\\DevFreela.API.csproj",
+      "projectPath": "D:\\Developer\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
       "packagesPath": "C:\\Users\\Edio\\.nuget\\packages\\",
-      "outputPath": "D:\\Developer\\Asp.net-core-API\\Asp.net-core-API\\obj\\",
+      "outputPath": "D:\\Developer\\DevFreela\\DevFreela.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
