@@ -1,0 +1,5 @@
+D:\Developer\Asp.net-core-API\Asp.net-core-API.Core\obj\Debug\net6.0\DevFreela.Core.csproj.AssemblyReference.cache
+D:\Developer\Asp.net-core-API\Asp.net-core-API.Core\obj\Debug\net6.0\DevFreela.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Developer\Asp.net-core-API\Asp.net-core-API.Core\obj\Debug\net6.0\DevFreela.Core.AssemblyInfoInputs.cache
+D:\Developer\Asp.net-core-API\Asp.net-core-API.Core\obj\Debug\net6.0\DevFreela.Core.AssemblyInfo.cs
+D:\Developer\Asp.net-core-API\Asp.net-core-API.Core\obj\Debug\net6.0\DevFreela.Core.csproj.CoreCompileInputs.cache
