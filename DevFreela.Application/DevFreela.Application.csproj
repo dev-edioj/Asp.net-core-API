@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Asp.net-core-API.Core\DevFreela.Core.csproj" />
-    <ProjectReference Include="..\DevFreela.Core\DevFreela.Core.csproj" />
+    <Folder Include="InputModels\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

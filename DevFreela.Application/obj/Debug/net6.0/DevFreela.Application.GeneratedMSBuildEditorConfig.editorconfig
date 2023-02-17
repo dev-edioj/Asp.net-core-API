@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Asp.net_core_API.Core
-build_property.ProjectDir = D:\Developer\DevFreela\DevFreela.Core\
+build_property.RootNamespace = DevFreela.Application
+build_property.ProjectDir = D:\Developer\DevFreela\DevFreela.Application\
