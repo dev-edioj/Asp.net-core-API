@@ -21,7 +21,7 @@ namespace Asp.net_core_API.Controllers
 
         [HttpPost("{id}/comment")]
 
-        public IActionResult PostComment(int id, [FromBody] CreateCommentModel createComment)
+        public IActionResult PostComment(int id, [FromBody] CreateCommentModel createCommentModel)
         {
             return NoContent();
         }
