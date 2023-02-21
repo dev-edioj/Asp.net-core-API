@@ -1,4 +1,6 @@
 using DevFreela.API.Models;
+using DevFreela.Application.InputModels;
+using DevFreela.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System;
@@ -6,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Asp.net_core_API.Controllers
+namespace DevFreela.Controllers
 {
     //Definindo uma rota base
     [Route("api/projects")]
@@ -14,18 +16,19 @@ namespace Asp.net_core_API.Controllers
     {
         private readonly OpeningTimeOption _option;
 
-        public ProjectsController(IOptions<OpeningTimeOption> option, ExampleClass exampleClass)
+        private readonly IProjectService _projectService;
+        public ProjectsController(IProjectService projectService)
         {
-            exampleClass.Name = "Update at ProjectsController";
+            _projectService = projectService;
 
-            _option = option.Value;
         }
         // api/projects?query=net core
         [HttpGet]
         public IActionResult Get(string query)
         {
             //Buscar ou filtrar todos
-            return Ok();
+            var projects = _projectService.GetAll(query);
+            return Ok(projects);
         }
 
         // /api/projects/1
@@ -33,33 +36,43 @@ namespace Asp.net_core_API.Controllers
 
         public IActionResult GetById(int id)
         {
+
             //Buscar ou filtrar
             //return NotFound();
-            return Ok();
+            var projects = _projectService.GetById(id);
+            if (projects == null)
+            {
+                return NotFound();
+            }
+            return Ok(projects);
         }
 
         [HttpPost]
 
-        public IActionResult Post([FromBody] CreateProjectModel createProject)
+        public IActionResult Post([FromBody] NewProjectInputModel inputModel)
         {
             //Cadastrar projeto
-            if (createProject.Title.Length > 200)
+            if (inputModel.Title.Length > 200)
             {
                 return BadRequest();
             }
 
-            return CreatedAtAction(nameof(GetById), new { id = createProject.Id }, createProject);
+           var id = _projectService.Create(inputModel);
+
+            return CreatedAtAction(nameof(GetById), new { id = id }, inputModel);
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateProjectModel updateProject)
+        public IActionResult Put(int id, [FromBody] UpdateProjectInputModel inputModel)
         {
             // Editar ou atualizar projeto
-            if (updateProject.Description.Length > 50)
+            if (inputModel.Description.Length > 50)
             {
                 return BadRequest();
             }
+
+            _projectService.Update(inputModel);
 
             return NoContent();
         }
@@ -68,6 +81,7 @@ namespace Asp.net_core_API.Controllers
 
         public IActionResult Delete(int id)
         {
+            _projectService.Delete(id);
             // Excluir projeto
             return NoContent();
         }

@@ -18,6 +18,7 @@ namespace DevFreela.Application.ViewModels
             FinishedAt = finishedAt;
         }
 
+
         public int Id { get; private set; }
         public string Title { get; private set; }
         public string Description { get; private set; }
