@@ -19,6 +19,7 @@ namespace DevFreela.Application.Services.Implementations
         {
             _dbContext = dbContext;
         }
+        
         public int Create(NewProjectInputModel inputModel)
         {
             var project = new Project(inputModel.Title, inputModel.Description, inputModel.IdClient, inputModel.IdFreelancer, inputModel.TotalCost);
@@ -37,13 +38,13 @@ namespace DevFreela.Application.Services.Implementations
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-            project.Cancel();
+            project?.Cancel();
         }
 
         public void Finish(int id)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-            project.Finish();
+            project?.Finish();
 
 
         }
@@ -65,10 +66,7 @@ namespace DevFreela.Application.Services.Implementations
         {
             var projects = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-            if (projects == null)
-            {
-                projects = null;
-            }
+            projects ??= null;
 
             var projectDetailsViewModel = new ProjectDetailsViewModel(
                 projects.Id,
@@ -87,13 +85,13 @@ namespace DevFreela.Application.Services.Implementations
         public void Star(int id)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-            project.Start();
+            project?.Start();
         }
 
         public void Update(UpdateProjectInputModel inputModel)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == inputModel.Id);
-            project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost);
+            project?.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost);
         }
     }
 }

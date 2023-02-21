@@ -16,7 +16,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj": "1.0.0",
           "DevFreela.Core": "1.0.0"
         },
         "compile": {
@@ -115,16 +114,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Não é possível encontrar o projeto 'D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj'. Verifique se a referência do projeto é válida e se o arquivo de projeto existe.",
-      "libraryId": "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

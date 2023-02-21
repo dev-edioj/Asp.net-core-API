@@ -36,6 +36,8 @@ namespace DevFreela.API
 
             services.AddScoped<IProjectService, ProjectService>();
 
+            services.AddScoped<IUserServices, UserService>();
+
             services.AddScoped<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
 
             services.AddControllers();

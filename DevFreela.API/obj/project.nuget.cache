@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "OvWHetOy7NOtz2oS9Xts3lsabbrC3I7W1jMX797jFrjnlvDaZ774vz3vfNgDZDzcQCEkOP1ZhoVOh+kk5RwTlA==",
-  "success": false,
+  "dgSpecHash": "RtMxVUyXnWOuR4ZvMNOeG3UFMk1zRJWSYsKT7a9hOVHxtuiuejPUlrMjeAoLfXx27HEFSG1wYNlvWOMvA/aMRg==",
+  "success": true,
   "projectFilePath": "D:\\Developer\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edio\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
@@ -11,15 +11,5 @@
     "C:\\Users\\Edio\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Não é possível encontrar o projeto 'D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj'. Verifique se a referência do projeto é válida e se o arquivo de projeto existe.",
-      "libraryId": "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

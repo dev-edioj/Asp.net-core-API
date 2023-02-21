@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JANA3ZaqS+jji4BbKM/SrdgJUy+T97BH+96v7KV3LUdcrS7UFp8zgH6XXcPihBA5Hb1arFdxg1kspVRpmeXfYw==",
-  "success": false,
+  "dgSpecHash": "GC/ODy95OJPmdJ+QJYY2H12jA0JEFs7szLN6slyzCU7Z9/r+SUxbV2PB09J14KqncM7qt+L6fv7xo1bwwSaZsg==",
+  "success": true,
   "projectFilePath": "D:\\Developer\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Não é possível encontrar o projeto 'D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj'. Verifique se a referência do projeto é válida e se o arquivo de projeto existe.",
-      "libraryId": "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

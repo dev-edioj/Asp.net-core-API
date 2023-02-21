@@ -91,9 +91,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj": {
-                "projectPath": "D:\\Developer\\DevFreela\\Asp.net-core-API.Core\\DevFreela.Core.csproj"
-              },
               "D:\\Developer\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
                 "projectPath": "D:\\Developer\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               }

@@ -8,23 +8,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace DevFreela.Controllers
 {
     //Definindo uma rota base
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
     {
-        private readonly OpeningTimeOption _option;
+        //private readonly OpeningTimeOption? _option;
 
         private readonly IProjectService _projectService;
         public ProjectsController(IProjectService projectService)
         {
             _projectService = projectService;
-
         }
+
         // api/projects?query=net core
         [HttpGet]
-        public IActionResult Get(string query)
+        public IActionResult GetAll(string query)
         {
             //Buscar ou filtrar todos
             var projects = _projectService.GetAll(query);
@@ -59,12 +60,12 @@ namespace DevFreela.Controllers
 
            var id = _projectService.Create(inputModel);
 
-            return CreatedAtAction(nameof(GetById), new { id = id }, inputModel);
+            return CreatedAtAction(nameof(GetById), new { id }, inputModel);
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateProjectInputModel inputModel)
+        public IActionResult Put( [FromBody] UpdateProjectInputModel inputModel)
         {
             // Editar ou atualizar projeto
             if (inputModel.Description.Length > 50)
