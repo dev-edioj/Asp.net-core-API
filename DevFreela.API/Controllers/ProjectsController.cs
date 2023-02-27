@@ -11,11 +11,12 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Controllers
 {
-    //Definindo uma rota base
+    
+    
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
     {
-        //private readonly OpeningTimeOption? _option;
+        //private readonly OpeningTimeOption _option;
 
         private readonly IProjectService _projectService;
         public ProjectsController(IProjectService projectService)
@@ -23,23 +24,23 @@ namespace DevFreela.Controllers
             _projectService = projectService;
         }
 
-        // api/projects?query=net core
+       
         [HttpGet]
         public IActionResult GetAll(string query)
         {
-            //Buscar ou filtrar todos
+            
             var projects = _projectService.GetAll(query);
             return Ok(projects);
         }
 
-        // /api/projects/1
+       
         [HttpGet("{id}")]
 
         public IActionResult GetById(int id)
         {
 
             //Buscar ou filtrar
-            //return NotFound();
+            
             var projects = _projectService.GetById(id);
             if (projects == null)
             {
