@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KK5ZWf9p5vat8nWXoH2sdAXv5QkPPBqlV1ZBAHvaH/LyMxovZrqnMkLxfs86meDI0JMDaPd1rXXcSH3JYD6zIA==",
+  "dgSpecHash": "/ZL3GA+IMmEI45sonnneEUYKDhKvVWWPNtckZd/1yPi7hQ3tgRvySJwIqc0OKS01fNVGHZEQ8ihDpm9g1j+3uQ==",
   "success": true,
-  "projectFilePath": "D:\\Developer\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+  "projectFilePath": "D:\\02 ESTUDOS\\02 PROGRAMAÇÃO\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edio\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

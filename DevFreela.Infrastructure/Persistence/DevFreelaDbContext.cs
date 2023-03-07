@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,25 +28,7 @@ namespace DevFreela.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Project>()
-                .HasKey(p => p.Id);
-            modelBuilder.Entity<Project>()
-                .HasOne(p => p.Freelancer)
-                .WithMany(f => f.FreelanceProjects)
-                .HasForeignKey(p => p.IdFreelancer)
-                .OnDelete(DeleteBehavior.Restrict);
-
-
-            modelBuilder.Entity<User>()
-                .HasKey(s => s.Id);
-            modelBuilder.Entity<Skill>()
-                .HasKey(s => s.Id);
-            modelBuilder.Entity<UserSkill>()
-                .HasKey(s => s.Id);
-            modelBuilder.Entity<ProjectComment>()
-                .HasKey(p => p.Id);
-            modelBuilder.Entity<UserComment>()
-                .HasKey(s => s.Id);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
     }
