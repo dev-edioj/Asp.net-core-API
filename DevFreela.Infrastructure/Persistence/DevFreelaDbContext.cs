@@ -31,5 +31,7 @@ namespace DevFreela.Infrastructure.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
+       
+
     }
 }
