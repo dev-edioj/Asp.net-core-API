@@ -33,7 +33,7 @@ namespace DevFreela.Infrastructure.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("DevFreelaCs");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-DS55HDM\\SQLEXPRESS;Database=DevFreela;Trusted_Connection=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

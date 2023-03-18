@@ -34,7 +34,14 @@ namespace DevFreela.API
             //services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
 
             //var connectionString = Configuration.GetConnectionString("DevFreelaCs");
-            services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevFreelaCs")));
+
+
+
+            services.AddDbContext<DevFreelaDbContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DevFreelaCs")));
+
+
+
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("Devfreela"));
 
             services.AddScoped<IProjectService, ProjectService>();
