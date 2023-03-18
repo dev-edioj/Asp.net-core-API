@@ -1,5 +1,6 @@
 ﻿using DevFreela.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,10 @@ namespace DevFreela.Infrastructure.Persistence
 {
     public class DevFreelaDbContext : DbContext
     {
+        public DevFreelaDbContext()
+        {
+
+        }
         public DevFreelaDbContext(DbContextOptions<DevFreelaDbContext> options) : base(options)
         {
             
@@ -25,6 +30,11 @@ namespace DevFreela.Infrastructure.Persistence
         public DbSet<ProjectComment> ProjectComments { get; set; }
 
         public DbSet<UserComment> UserComments { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("DevFreelaCs");
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

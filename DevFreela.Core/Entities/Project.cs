@@ -9,18 +9,18 @@ namespace DevFreela.Core.Entities
         {
             Title = title;
             Description = description;
-            IdClient = idCliente;
+            IdCliente = idCliente;
             IdFreelancer = idFreelancer;
             TotalCost = totalCost;
-            
             CreatedAt = DateTime.Now;
+
             Status = ProjectStatusEnum.Created;
             Comments = new List<ProjectComment>();
         }
         public string Title { get; private set; }
         public string Description { get; private set; }
-        public int IdClient { get; private set; }
-        public User Client { get ; private set; }
+        public int IdCliente { get; private set; }
+        public User Cliente { get ; private set; }
         public int IdFreelancer { get; private set; }
         public User Freelancer { get; private set; }
         public decimal TotalCost { get; private set; }
