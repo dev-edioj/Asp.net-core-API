@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "aOdVlh0T5KDAJI3b7x1HaQSumDB73AneEolFyhJwZnE47nrBG0aVKs3Re3TEoO6UV4VMwB2ZLk0O0KwT6qPURA==",
+  "dgSpecHash": "MR9fANZeQII+Tesi2zB29hOS/8oVKOzptMpF2/xSpuvgM7jjixKYzeZItbPkvTkAAlYjBpr+dDDpR10CG62Tog==",
   "success": true,
-  "projectFilePath": "D:\\02 ESTUDOS\\02 PROGRAMAÇÃO\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+  "projectFilePath": "D:\\ARQUIVOS\\02 ESTUDOS\\02 PROGRAMAÇÃO\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edio\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Edio\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\Edio\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Edio\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

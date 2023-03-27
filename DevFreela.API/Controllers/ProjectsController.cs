@@ -1,6 +1,7 @@
 using DevFreela.API.Models;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System;
@@ -19,9 +20,11 @@ namespace DevFreela.Controllers
         //private readonly OpeningTimeOption _option;
 
         private readonly IProjectService _projectService;
-        public ProjectsController(IProjectService projectService)
+        private readonly IMediator _mediator;
+        public ProjectsController(IProjectService projectService, IMediator mediator)
         {
             _projectService = projectService;
+            _mediator = mediator;
         }
 
        
@@ -59,7 +62,9 @@ namespace DevFreela.Controllers
                 return BadRequest();
             }
 
-           var id = _projectService.Create(inputModel);
+            //var id = _projectService.Create(inputModel);
+
+            var id = mediator.Send();
 
             return CreatedAtAction(nameof(GetById), new { id }, inputModel);
 
