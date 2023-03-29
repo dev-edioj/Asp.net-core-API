@@ -1,4 +1,7 @@
 using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Commands.DeleteProject;
+using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
 using MediatR;
@@ -54,42 +57,42 @@ namespace DevFreela.Controllers
 
         [HttpPost]
 
-        public IActionResult Post([FromBody] NewProjectInputModel inputModel)
+        public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
             //Cadastrar projeto
-            if (inputModel.Title.Length > 200)
+            if (command.Title.Length > 200)
             {
                 return BadRequest();
             }
 
             //var id = _projectService.Create(inputModel);
 
-            var id = mediator.Send();
+            var id = await _mediator.Send(command);
 
-            return CreatedAtAction(nameof(GetById), new { id }, inputModel);
+            return CreatedAtAction(nameof(GetById), new { id }, command);
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put( [FromBody] UpdateProjectInputModel inputModel)
+        public async Task<IActionResult> Put( [FromBody] UpdateProjectCommand command)
         {
             // Editar ou atualizar projeto
-            if (inputModel.Description.Length > 50)
+            if (command.Description.Length > 50)
             {
                 return BadRequest();
             }
 
-            _projectService.Update(inputModel);
+            await _mediator.Send(command);
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(DeleteProjectCommand command)
         {
-            _projectService.Delete(id);
-            // Excluir projeto
+           await _mediator.Send(command);
+         
             return NoContent();
         }
     }

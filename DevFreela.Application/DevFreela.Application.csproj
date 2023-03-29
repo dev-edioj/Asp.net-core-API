@@ -12,11 +12,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\GetAllSkills\" />
+    <PackageReference Include="MediatR" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.0.1" />
+    <Folder Include="Commands\FinishProject\" />
+    <Folder Include="Commands\CreateComment\" />
+    <Folder Include="Commands\StartProject\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>
