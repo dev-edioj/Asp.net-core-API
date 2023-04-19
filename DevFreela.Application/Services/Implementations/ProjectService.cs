@@ -78,7 +78,9 @@ namespace DevFreela.Application.Services.Implementations
                 projects.Description,
                 projects.TotalCost,
                 projects.StartedAt,
-                projects.FinishedAt
+                projects.FinishedAt,
+                projects.Cliente.FullName,
+                projects.Freelancer.FullName
                 );
 
             return projectDetailsViewModel;

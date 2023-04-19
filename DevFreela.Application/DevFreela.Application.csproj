@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="InputModels\NovaPasta\**" />
+    <Compile Remove="Queries\NovaPasta1\**" />
+    <Compile Remove="Queries\NovaPasta\**" />
+    <EmbeddedResource Remove="InputModels\NovaPasta\**" />
+    <EmbeddedResource Remove="Queries\NovaPasta1\**" />
+    <EmbeddedResource Remove="Queries\NovaPasta\**" />
+    <None Remove="InputModels\NovaPasta\**" />
+    <None Remove="Queries\NovaPasta1\**" />
+    <None Remove="Queries\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DevFreela.Core\DevFreela.Core.csproj" />
     <ProjectReference Include="..\DevFreela.Infrastructure\DevFreela.Infrastructure.csproj" />
   </ItemGroup>
@@ -19,7 +31,8 @@
     <Folder Include="Commands\FinishProject\" />
     <Folder Include="Commands\CreateComment\" />
     <Folder Include="Commands\StartProject\" />
-    <Folder Include="Queries\" />
+    <Folder Include="Queries\GetAllSkills\" />
+    <Folder Include="Queries\GetUser\" />
   </ItemGroup>
 
 </Project>
