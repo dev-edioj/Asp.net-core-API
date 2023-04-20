@@ -1,6 +1,8 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateComment;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreela.Controllers
@@ -9,10 +11,11 @@ namespace DevFreela.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserServices _userService;
-        public UsersController(IUserServices userService)
+        private readonly IMediator _mediator;
+        public UsersController(IUserServices userService, IMediator mediator)
         {
             _userService = userService;
-
+            _mediator= mediator;
         }
 
         [HttpGet("{id}")]
@@ -32,10 +35,12 @@ namespace DevFreela.Controllers
 
         [HttpPost("{id}/comment")]
 
-        public IActionResult PostComment(int id, [FromBody] CreateCommentInputModel inputModel)
+        public  IActionResult PostComment([FromBody] CreateCommentCommand command)
         {
-            _userService.CreateComment(inputModel);
-            return NoContent();
+            //_userService.CreateComment(inputModel);
+
+            var createComment = _mediator.Send(command);
+            return Ok(createComment);
         }
 
         [HttpPut("{id}")]

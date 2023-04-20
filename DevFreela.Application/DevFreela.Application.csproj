@@ -28,11 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\FinishProject\" />
-    <Folder Include="Commands\CreateComment\" />
     <Folder Include="Commands\StartProject\" />
-    <Folder Include="Queries\GetAllSkills\" />
-    <Folder Include="Queries\GetUser\" />
   </ItemGroup>
 
 </Project>
