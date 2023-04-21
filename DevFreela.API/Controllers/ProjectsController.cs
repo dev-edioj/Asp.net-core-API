@@ -2,6 +2,7 @@ using DevFreela.API.Models;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.DeleteProject;
 using DevFreela.Application.Commands.FinishProject;
+using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Queries.GetAllProjects;
@@ -91,6 +92,14 @@ namespace DevFreela.Controllers
 
             await _mediator.Send(command);
 
+            return NoContent();
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put([FromBody] StartProjectCommand command)
+        {
+            await _mediator.Send(command);
             return NoContent();
         }
 
